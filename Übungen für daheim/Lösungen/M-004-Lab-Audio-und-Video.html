@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio und Video</title>
+    <style>
+        :root{
+            font-size: 20px;
+        }
+        body{
+            margin: 0;
+        }
+        .flex-container {
+            display: flex;
+        }
+        .video-container{
+            width: 50%;
+            box-sizing: border-box;
+            padding: 2rem;
+        }
+        .video-container>video{
+            width: 100%;
+        }
+        .video-container>iframe{
+            width: 100%;
+            height: 100%;
+        }
+        .video-container>progress{
+            width: 100%;
+        }
+        .navbuttons{
+            display: flex;
+        }
+
+        .navbuttons>button{
+            width: 16.67%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="flex-container">
+        <div class="video-container">
+            <video controls poster="Dateipfad_zu_Bild.png">
+                <source src="Dateipfad_zu_video.mp4" type="video/mp4">
+            </video>
+            <p>B-Roll provided by <a href="http://www.videezy.com" target="_blank">Videezy</a></p>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/vA3gMmN9s8M" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <video id="video1">
+            <source src="Dateipfad_zu_Video.mp4" type="video/mp4" />
+        </video>
+        <!-- eigenen Fortschrittsbalken erstellen -->
+        <progress id="videoProgress" value="0" max="100"></progress>
+        <!-- eigene Play- (und andere) Buttons erstellen -->
+        <div class="navbuttons">
+            <button id="btn-play">Play/Pause</button>
+            <button id="btn-small">Small</button>
+            <button id="btn-normal">Normal</button>
+            <button id="btn-big">Big</button>
+            <button id="btn-fullscreen">Fullscreen</button>
+            <button id="btn-mute">Mute</button>
+        </div>
+    </div>
+
+    <script>
+
+        // BUTTONS ---------------------------------------------------------------------
+        var myVideo = document.getElementById("video1");
+        var playBtn = document.getElementById('btn-play');
+        var smallBtn = document.getElementById('btn-small');
+        var normalBtn = document.getElementById('btn-normal');
+        var bigBtn = document.getElementById('btn-big');
+        var fullscreenBtn = document.getElementById('btn-fullscreen');
+        var muteBtn = document.getElementById('btn-mute');
+
+        // play-Button
+        playBtn.addEventListener('click', function(){
+            if (myVideo.paused)
+                myVideo.play();
+            else
+                myVideo.pause();
+        });
+
+        // small-button
+        smallBtn.addEventListener('click', function(){
+            myVideo.parentElement.style.width = '300px';
+            playBtn.innerHTML = "&#9654;";
+            smallBtn.innerHTML = "&#9642;";
+            normalBtn.innerHTML = "&#9726;";
+            bigBtn.innerHTML = "&#9724;";
+            fullscreenBtn.innerHTML = "&#9635;";
+            muteBtn.innerHTML = "&#8709;";
+        });
+
+
+        // normal-button
+        normalBtn.addEventListener('click', function(){
+            myVideo.parentElement.style.width = '50%';
+            playBtn.innerHTML = "Play/Pause";
+            smallBtn.innerHTML = "Small";
+            normalBtn.innerHTML = "Normal";
+            bigBtn.innerHTML = "Big";
+            fullscreenBtn.innerHTML = "Fullscreen";
+            muteBtn.innerHTML = "Mute";
+        });
+        
+
+        // big-button
+        bigBtn.addEventListener('click', function(){
+            myVideo.parentElement.style.width = '700px';
+            playBtn.innerHTML = "Play/Pause";
+            smallBtn.innerHTML = "Small";
+            normalBtn.innerHTML = "Normal";
+            bigBtn.innerHTML = "Big";
+            fullscreenBtn.innerHTML = "Fullscreen";
+            muteBtn.innerHTML = "Mute";
+        });
+
+        // fullscreen-button
+        fullscreenBtn.addEventListener('click', function(){
+            if (myVideo.requestFullscreen) {
+                myVideo.requestFullscreen();
+            } else if (myVideo.mozRequestFullScreen) {
+                myVideo.mozRequestFullScreen();
+            } else if (myVideo.webkitRequestFullscreen) {
+                myVideo.webkitRequestFullscreen();
+            }
+            playBtn.innerHTML = "Play/Pause";
+            smallBtn.innerHTML = "Small";
+            normalBtn.innerHTML = "Normal";
+            bigBtn.innerHTML = "Big";
+            fullscreenBtn.innerHTML = "Fullscreen";
+            muteBtn.innerHTML = "Mute";
+        });
+        
+        // mute-button
+        muteBtn.addEventListener('click', function(){
+            video.muted = !video.muted;
+        });
+        
+
+        // PROGRESS BAR ------------------------------------------------------------
+        var video = document.getElementById("video1");
+        var videoProgress = document.getElementById("videoProgress");
+
+        video.addEventListener("timeupdate", function () {
+            videoProgress.value = 100 * video.currentTime / video.duration;
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <style>
+        div {
+            min-height: 200px;
+            width: 600px;
+            border: 2px solid black;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn-text">Text</button>
+    <button id="btn-mango">Mango</button>
+    <button id="btn-del">Delete Last</button>
+    <button id="btn-splice">Splice</button>
+    <button id="btn-sort">Sort</button>
+
+    <button id="btn-concat">Concat</button>
+    <div id="demo-div"></div>
+
+
+    <div class="demo-class"></div>
+    <div class="other-div"></div>
+    <div class="demo-class"></div>
+    <div class="demo-class"></div>
+    <div class="other-div"></div>
+    <div class="demo-class"></div>
+    <div class="demo-class"></div>
+    <div class="demo-class"></div>
+    <div class="demo-class"></div>
+    <div class="demo-class"></div>
+    <div class="demo-class"></div>
+
+
+    <script>
+        var btnText = document.getElementById('btn-text');
+        var btnMango = document.getElementById('btn-mango');
+        var btnDel = document.getElementById('btn-del');
+        var btnSplice = document.getElementById('btn-splice');
+        var btnSort = document.getElementById('btn-sort');
+        var btnConcat = document.getElementById('btn-concat');
+        var demoDiv = document.getElementById('demo-div');
+
+                var fruitSalad = ['Banane', 'Apfel', 'Kiwi'];
+        //    Stelle im Array        0         1        2
+        //    length                 1         2        3
+
+
+
+        console.log(fruitSalad[0]);
+
+        btnText.addEventListener('click', function () {
+            demoDiv.innerHTML = '<p>' + fruitSalad.join(', ') + '</p>';
+        });
+
+
+        btnMango.addEventListener('click', function () {
+            fruitSalad.push('Mango');
+            demoDiv.innerHTML += '<p>' + fruitSalad.join(', ') + '</p>';
+        });
+
+
+        btnDel.addEventListener('click', function () {
+            fruitSalad.pop();
+            demoDiv.innerHTML += '<p>' + fruitSalad.join(', ') + '</p>';
+        });
+
+        /* splice: Einfügen oder Ersetzen */
+        btnSplice.addEventListener('click', function () {
+            fruitSalad.splice(1, 0, 'Birne', 'Weintrauben');
+            demoDiv.innerHTML += '<p>' + fruitSalad.join(', ') + '</p>';
+        });
+
+
+        btnSort.addEventListener('click', function () {
+            fruitSalad.sort();
+            demoDiv.innerHTML += '<p>' + fruitSalad.join(', ') + '</p>';
+        });
+
+
+        var citrusFruits = ['Orange', 'Limette', 'Kumquat'];
+
+        btnConcat.addEventListener('click', function () {
+            var allFruits = fruitSalad.concat(citrusFruits);
+            demoDiv.innerHTML += '<p>' + allFruits.join(', ') + '</p>';
+        });
+
+
+
+
+        var classDemo = document.getElementsByClassName('demo-class');
+
+        for(var i = 0; i < classDemo.length; i++) {
+            classDemo[i].style.backgroundColor = 'green';
+        }
+
+        
+        var classDemo2 = document.getElementsByClassName('other-div');
+
+        for(var j = 0; j < classDemo2.length; j++) {
+            classDemo[j].style.backgroundColor = 'lightblue';
+        }
+
+    </script>
+
+</body>
+
+</html>

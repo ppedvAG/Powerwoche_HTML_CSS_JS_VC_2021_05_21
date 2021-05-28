@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basics</title>
+    <!-- <link rel="stylesheet" href="../CSS/Dateipfad_zu_CSS.css"> -->
+    <!-- <script src="Dateipfad_zu_JS.js" defer></script> -->
+    <style>
+        .class-demo{
+            background-color: aqua;
+        }
+
+        #demo-div-2{
+            border: 2px solid green;
+            padding: 10px;
+        }
+    </style>
+</head>
+<BODY>
+    <!-- HTML ..... Hyper Text Markup Language -->
+    <!-- CSS  ..... Cascading Style Sheets -->
+
+    <div id="demo-div" class="class-demo">
+        <p>Hallo!</p>
+    </div>
+
+    <div id="demo-div-2"></div>
+    
+    <script>
+        /* 
+            Immer ein eigenes JS-File verwenden!
+            Hier nur zwecks leichterer Auffindbarkeit in einem File!
+        */
+
+        // einzeilige Kommentare
+
+
+        /* 
+            toller Code
+                // verschachtelte Kommentar
+            toller Code
+        */
+
+
+        /* Variablen */
+
+        /* Variablendeklaration */
+
+        var x; 
+
+        /* mehrere Variablen auf einmal deklarieren: */
+
+        var y, text, firstName;
+
+
+        /* Initialisieren */
+
+        x = 5;
+
+
+
+        /* Deklaration und Initialisierung in einem: */
+
+        var a = 3;
+
+        var b, c, d = 4;
+
+
+        /* Konstanten */
+        /* dieser Wert verändert sich nicht */
+
+        const mwst = 0.19;
+
+
+
+        console.log('Hallo!');
+        console.log(x);
+
+
+
+        /* Operatoren */
+        /* 
+        
+                +, -, *, /
+
+                %  .... Modulus-Operator  10%2=0 (der Rest)
+
+                ++, --      increment, decrement
+
+                +=, -=, *=, /=
+
+
+                // Vergleichsoperatoren
+
+                    ==, <=, >=, !=
+                    ===, !==      .... fragt auch den Datentyp ab
+
+
+                // logische Operatoren
+
+                    &&    .................. logisches UND (AND)
+                    ||    .................. logisches ODER (OR)
+                    !     .................. NICHT (NOT)
+
+                    
+
+
+
+                // Datentypen
+
+                    number (Zahl)
+
+                        5
+                        5.5
+                        -5
+                        5.1234567890987654321
+                        123e5 (Exponentialschreibweise)  12300000
+                        123e-5   0.00123
+
+                    
+                    String (Text)
+
+                        'Text'
+                        "Text"
+                        'Das ist ein "String".'
+                        "Das ist ein 'String'."
+
+
+                    boolean
+                        true/false
+
+
+
+                    object
+
+
+                    undefined (noch nicht definiert)
+
+
+        */
+
+        
+        x = x + 5;
+
+        x += 7;
+
+        x++;  // 18
+
+        console.log(x);
+
+        console.log(x == 9);  // false
+
+
+        c = '18';
+
+        console.log(c);
+
+
+        console.log(x == c);
+
+        
+        console.log(x === c);
+
+        console.log('Das ist ein "String".');
+
+
+        console.log(typeof x);
+        console.log(typeof c);
+        console.log(typeof text);
+
+        var e = 'Hallo';
+
+        console.log(isNaN(x));
+        console.log(isNaN(text));
+        console.log(isNaN(e));
+
+
+        console.log(x + c); // 1818  --> Achtung: Text, keine Berechnung!
+
+        
+        console.log(x + e); // 18Hallo
+
+
+        firstName = 'James';
+
+        var lastName = 'Bond';
+
+        var fullName = firstName + ' ' + lastName;
+
+        console.log(fullName);
+
+        console.log('Der aktuelle Wert von x ist: ' + x);
+
+        
+        console.log('Der aktuelle Wert von x ist: ' + x + '.');
+
+
+
+        /* Elemente ansprechen: */
+
+
+        document.getElementById('demo-div');
+
+
+        // innerHTML
+        // innerText
+        // textContent
+
+        console.log(document.getElementById('demo-div').innerHTML);
+        console.log(document.getElementById('demo-div').innerText);
+        console.log(document.getElementById('demo-div').textContent);
+
+
+        // ganzes Objekt in Variable hinterlegen
+
+        var demoDiv = document.getElementById('demo-div');
+
+        console.log(typeof demoDiv);
+
+        
+        console.log(demoDiv.innerHTML);
+        console.log(demoDiv.innerText);
+        console.log(demoDiv.textContent);
+
+
+        document.getElementById('demo-div').innerHTML = 'Das ist mein neuer Text.';
+
+        
+        demoDiv.textContent = 'Das ist mein ganz neuer Text.';
+
+        demoDiv.innerText += ' Hallo';
+
+
+        var demoDiv2 = document.getElementById('demo-div-2');
+
+
+        demoDiv2.innerHTML = '<p>' + fullName + '</p>';
+
+        
+        // funktioniert NICHT mit innerText (oder textContent): dann bekommen wir <p> als Text angezeigt
+        // demoDiv2.innerText += 'Das mein Text für Div 2.';
+
+
+        demoDiv2.style.backgroundColor = 'rgb(90, 255, 90)';
+
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

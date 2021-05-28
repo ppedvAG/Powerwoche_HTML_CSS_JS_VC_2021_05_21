@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradients</title>
+    <style>
+
+        body{
+            background: linear-gradient(rgb(159, 188, 241), rgb(70, 123, 221));
+            /* background: radial-gradient(yellow, blue); */
+            background-attachment: fixed;
+        }
+
+        .container{
+            width: 60%;
+            margin: 200px auto;
+            background-color: slategray;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        div[class^="demo"]{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        .demo-01{
+            background-color: red;
+            background: linear-gradient(white, blue);
+        }
+
+        .demo-02{
+            background: linear-gradient(red, orange, yellow, yellowgreen, green, turquoise, blue, purple, indigo);
+        }
+
+        .demo-03{
+            background: linear-gradient(red 25%, green, yellow);
+        }
+
+        
+        .demo-04{
+            background: linear-gradient(red 25%, green, yellow 75%);
+        }
+
+        
+        .demo-05{
+            background: linear-gradient(red 0%, red 25%, green 25%, green 75%,  yellow 75%, yellow 100%);
+        }
+
+        
+        .demo-06{
+            background: linear-gradient(45deg, red, orange, yellow, yellowgreen, green, turquoise, blue, purple, indigo);
+        }
+
+        
+        .demo-07{
+            background-color: aqua;
+            background: repeating-linear-gradient(45deg, red 10px, orange, yellow, yellowgreen, green, turquoise, blue, purple, indigo 50px);
+        }
+
+        .demo-08{
+            background: radial-gradient(white, blue);
+        }
+
+        
+        .demo-09{
+            background: radial-gradient(white, blue, red, green, yellow);
+        }
+        
+        .demo-10{
+            background: radial-gradient(white 25%, blue, red, green, yellow);
+        }
+
+        
+        .demo-11{
+            background: radial-gradient(white 0%, white 25%, blue 25%, blue 50%, red 50%, red 75%, green 75%, green 100%);
+        }
+
+        .demo-12{
+            background: radial-gradient(50px 50px, white, blue);
+        }
+
+        .demo-13{
+            background: radial-gradient(50px 50px at 70px 70px, white, blue);
+        }
+
+        
+        .demo-14{
+            background: radial-gradient(50px 50px at 0px 0px, white, blue);
+        }
+        .demo-15{
+            background: radial-gradient(50px 50px at top right, white, blue);
+        }
+
+        div[class^="other"]{
+            width: 45%;
+            height: 300px;
+            border: 2px solid black;
+        }
+
+        .other-demo-1{
+            background-color: cornflowerblue;
+        }
+
+        
+        .other-demo-2{
+            background: linear-gradient(rgb(120, 161, 238), rgb(77, 122, 206));
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="demo-01"></div>
+        <div class="demo-02"></div>
+        <div class="demo-03"></div>
+        <div class="demo-04"></div>
+        <div class="demo-05"></div>
+        <div class="demo-06"></div>
+        <div class="demo-07"></div>
+        <div class="demo-08"></div>
+        <div class="demo-09"></div>
+        <div class="demo-10"></div>
+        <div class="demo-11"></div>
+        <div class="demo-12"></div>
+        <div class="demo-13"></div>
+        <div class="demo-14"></div>
+        <div class="demo-15"></div>
+        <div class="other-demo-1"></div>
+        <div class="other-demo-2"></div>
+    </div>
+
+
+</body>
+</html>

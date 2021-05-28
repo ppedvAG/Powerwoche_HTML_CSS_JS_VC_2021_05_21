@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farben</title>
+    <!-- <link rel="stylesheet" href="..Dateipfad_zum_CSS-File.css"> -->
+    <style>
+        body{
+            /* background-color: fuchsia; */
+        }
+        div{
+            height: 200px;
+            width: 200px;
+            border-width: 2px;
+            border-style: solid;
+            border-color:rgb(12, 139, 139);
+        }
+
+        .demo-div01{
+            background-color: aqua;
+        }
+        
+        .demo-div02{
+            background-color: rgb(0, 255, 255);
+        }
+
+        /* 
+                    rgb-Schreibweise
+
+                                    r     g     b
+                                  red   green  blue
+                                  255    255   255    ........ weiß
+                                   0      0      0    ........ schwarz
+                                  43     43      43   ........ grau
+                                  255     0       0   ........ rot
+                                  0      255      0   ........ grün
+                                  0       0      255  ........ blau
+        
+        */
+        
+        .demo-div03{
+            background-color: #00ffff;
+        }
+
+        /* 
+                Hex-Schreibweise
+
+                                r     g     b
+                                00    ff    ff
+
+
+                                0123456789 A   B   C   D   E   F
+                                           10  11  12  13  14  15
+
+
+
+                            15*16^0   +  15*16^1  
+                              15      +    240    =   255       
+        */
+
+        .demo-div04{
+            background-color: hsl(180, 100%, 50%);
+        }
+
+        
+        .demo-div05{
+            background-color: rgba(0, 255, 255, 0.5);
+        }
+
+        .visibility-demo{
+            background-color: royalblue;
+            /* visibility: hidden; */ /* visibility: visible; */
+        }
+
+        .display-demo{
+            background-color: rgb(76, 0, 99);
+            /* display: none; */ /* display: block; */
+        }
+
+        .demo-opacity{
+            background-color: rgb(153, 205, 50);
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-div01"></div>
+    <div class="demo-div02"></div>
+    <div class="demo-div03"></div>
+    <div class="demo-div04"></div>
+    <div class="demo-div05"></div>
+    <div class="display-demo"></div>
+    <div class="visibility-demo"></div>
+    <div class="demo-opacity">TEXT</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grundstruktur</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <!-- <script src="../JS/myJS.js" defer></script> -->
+
+    <style>
+        html{
+            font-size: 20px;
+        }
+        .lbl-inp-container{
+            /* border: 2px solid green; */
+            display: flex;
+            width: 35%;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .vor,
+        .nach {
+            display: inline-block;
+            padding: 1em;
+        }
+
+        .unter {
+            padding: 1em;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="cname-container">CompanyName + Logo</div>
+        <nav class="main-nav-container">Navigationsleiste</nav>
+        <main class="main-content-container">
+
+            <div class="lbl-inp-container">
+                <div>
+                    <label class="lbl-demo" for="">Range:</label>
+                    <span id="min-div" class="vor"></span>
+                    <input type="range" id="slider" class="inp-demo" name="Slider" min="0" max="100" value="50"
+                        step="1">
+                    <span id="max-div" class="nach"></span>
+                </div>
+                <div id="output-div" class="unter"></div>
+            </div>
+        </main>
+        <footer class="main-footer-container">Footer</footer>
+    </div>
+
+
+    <script>
+
+        var minDiv = document.getElementById('min-div');
+        var maxDiv = document.getElementById('max-div');
+        var outputDiv = document.getElementById('output-div');
+        var slider = document.getElementById('slider');
+
+        minDiv.textContent = slider.getAttribute('min');
+        maxDiv.textContent = slider.getAttribute('max');
+        outputDiv.textContent = slider.getAttribute('value');
+
+
+        slider.addEventListener('input', function(){
+            outputDiv.textContent = slider.value;
+        });
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schatten</title>
+    <style>
+        .container {
+            background-color: lightgray;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        div[class^="demo"] {
+            width: 150px;
+            height: 150px;
+            background-color: lightskyblue;
+            margin: 30px;
+        }
+
+
+        .demo-01{
+            box-shadow: 5px 5px;
+            /* 1. Wert: x-Achse
+               2. Wert: y-Achse
+            */
+        }
+
+        .demo-02{
+            box-shadow: 5px 5px 10px;
+            /* 3. Wert = Blur-Radius */
+        }
+
+        .demo-03{
+            box-shadow: 5px 5px 10px 10px;
+            /* 4. Wert = Ausdehnung */
+        }
+
+        .demo-04{
+            box-shadow: 5px 5px 10px black;
+        }
+
+        .demo-05{
+            box-shadow: 5px 5px 10px orangered;
+        }
+     
+        .demo-06{
+            box-shadow: 0 0 30px orangered;
+        }
+
+        .demo-07{
+            box-shadow: 0 0 30px inset;
+            /* innerhalb des Objektes */
+        }
+
+        .demo-08{
+            box-shadow: 5px 5px 10px blue, 10px 10px 15px red, 20px 20px 40px yellow;
+        }
+
+        
+        .demo-09{
+            box-shadow: 5px 5px 10px rgba(59, 59, 59, 0.87), 10px 10px 15px rgba(92, 92, 92, 0.746), 15px 15px 20px rgba(133, 133, 133, 0.445);
+        }
+
+        .demo-10{
+            box-shadow: 5px 5px 20px black;
+        }
+
+        .demo-11{
+            font-size: 44px;
+            padding: 10px;
+            text-shadow: 0 0 4px rgba(247, 252, 0, 0.9);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="demo-01"></div>
+        <div class="demo-02"></div>
+        <div class="demo-03"></div>
+        <div class="demo-04"></div>
+        <div class="demo-05"></div>
+        <div class="demo-06"></div>
+        <div class="demo-07"></div>
+        <div class="demo-08"></div>
+        <div class="demo-09"></div>
+        <div class="demo-10"></div>
+        <div class="demo-11">TEXT</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        :root{
+            font-size: 20px;
+        }
+        body{
+            margin: 0;
+        }
+        .logo-companyname-container{
+            height: 100px;
+            background-color: navy;
+        }
+
+        .main-nav-container{
+            background-color: rgb(0, 0, 46);
+            color: white;
+        }
+
+        .main-navbar, .dropdown{
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .main-navbar::after{
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        .main-navbar>li{
+            float: left;
+            position: relative;
+        }
+
+        .main-navbar>li:hover{
+            color:rgb(0, 0, 46);
+            background-color: white;
+        }
+
+        .main-navbar a{
+            display: inline-block;
+            color: inherit;
+            text-decoration: none;
+            padding: 0.5em 1.5em;
+        }
+
+        .dropdown{
+            background-color: cornflowerblue;
+            position: absolute;
+            display: none;
+        }
+
+        .dropdown>li:hover{
+            color:cornflowerblue;
+            background-color: white;
+        }
+
+        .main-navbar>li:hover .dropdown{
+            display: block;
+        }
+        
+        .main-content-container{
+            height: 100vh;
+            background-color: rgb(193, 193, 241);
+        }
+        .main-footer-container{
+            height: 100px;
+            background-color: navy;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="logo-companyname-container"></div>
+        <nav class="main-nav-container">
+
+            <ul class="main-navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="../Übungen/HTML/Kugel.html">Gallery</a></li>
+                <li><a href="#">Products</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Angebote</a></li>
+                        <li><a href="#">Aktuell</a></li>
+                        <li><a href="#">Muttertag</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+
+        </nav>
+        <main class="main-content-container"></main>
+        <footer class="main-footer-container"></footer>
+    </div>
+    
+</body>
+</html>

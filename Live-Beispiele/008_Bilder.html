@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilder</title>
+    <style>
+        html{
+            font-size: 20px;
+        }
+
+        body{
+            background-image: url(../images/bg_muster3.jpg);
+            /* background-repeat: repeat-y; */
+            padding-bottom: 150px;
+        }
+
+        .img-container{
+            border: 2px solid red;
+            background-color: white;
+            /* padding: 10px; */
+            width: 50%;
+        }
+
+        img{
+            width: 100%;
+            display: block;
+        }
+
+        .bg-demo-1{
+            border: 2px solid chartreuse;
+            height: 250px;
+            width: 650px;
+            /* background-color: white; */
+            background-image: url(../images/bg_eule.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="img-container">
+        <img src="../images/kingfisher.jpg" alt="kingfisher">
+    </div>
+
+
+    
+    <figure class="img-container">
+        <img src="../images/horse.jpg" alt="horse">
+        <figcaption>Das ist ein schönes Bild.</figcaption>
+    </figure>
+
+    <div class="bg-demo-1"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular</title>
+    <style>
+        :root{
+            font-size: 20px;
+        }
+
+        body{
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: floralwhite; /* für den Fall, dass das Bild nicht geladen werden kann */
+            background-image: url(Dateipfad_zu_Hintergrundbild.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .form-demo{
+            background: linear-gradient(to right, rgba(0, 100, 0, 0.8), rgba(245, 245, 245, 0.8) 40%, rgba(245, 245, 245, 0.8) 60%, rgba(178, 34, 34, 0.8));
+            box-shadow: 0 0 8px black;
+            color: rgb(41, 41, 41);
+            width: 80%;
+            margin: 0 auto;
+            min-height: 100vh;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        .fieldset-demo {
+            margin-bottom: 1em;
+            color: rgb(255, 250, 240);
+            width: 46%;
+        }
+
+        legend {
+            font-weight: bold;
+            color: rgb(41, 41, 41);
+        }
+
+        .bg-transparent {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 0.3rem 1rem;
+            border-radius: 0.3rem;
+        }
+
+        .lbl-inp-container{
+            margin-bottom: 0.5em;
+        }
+
+        label{
+            display: inline-block;
+            width: 8em;
+        }
+
+        .btn-submit{
+            background-color: rgb(255, 250, 240);
+            color: rgb(41, 41, 41);
+            border-radius: 0.2rem;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+        }
+
+        .btn-submit:hover{
+            cursor: pointer;
+            background-color: rgb(215, 252, 184);
+            color: rgb(255, 250, 240);
+            border-color:rgb(115, 255, 0);
+            text-shadow: 0 0 4px rgb(41, 41, 41);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <form action="#" method="post" class="form-demo">
+
+        <fieldset id="pizzas" class="fieldset-demo">
+            <legend>Pizze</legend>
+            <div class="bg-transparent" >
+
+                <div class="lbl-inp-container">
+                    <label><input name="pizze" type="radio" checked> Margherita</label>
+                </div>
+                <div class="lbl-inp-container">
+                    <label><input name="pizze" type="radio"> Funghi</label>
+                </div>
+                <div class="lbl-inp-container">
+                    <label>
+                        <input name="pizze" type="radio"> Tonno</label>
+                </div>
+                <div class="lbl-inp-container">
+                    <label>
+                        <input name="pizze" type="radio"> Salami</label>
+                </div>
+                <div class="lbl-inp-container">
+                    <label>
+                        <input name="pizze" type="radio"> Della Casa</label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset id="extras" class="fieldset-demo">
+            <legend>Extras</legend>
+            <div class="bg-transparent">
+                <div class="lbl-inp-container">
+                    <label>
+                        <input type="checkbox" name="extras"> Mais</label>
+                </div>
+                <div class="lbl-inp-container">
+                    <label>
+                        <input type="checkbox" name="extras"> Paprika</label>
+                </div>
+                <div class="lbl-inp-container">
+                    <label>
+                        <input type="checkbox" name="extras"> Zwiebeln</label>
+                </div>
+                <div class="lbl-inp-container">
+                    <label>
+                        <input type="checkbox" name="extras"> Ei</label>
+                </div>
+                <div class="lbl-inp-container">
+                    <label>
+                        <input type="checkbox" name="extras"> Tomaten</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset id="deliverTo" class="fieldset-demo">
+            <legend>Lieferadresse</legend>
+            <div class="bg-transparent">
+                <div class="lbl-inp-container">
+                    <label for="first-name">Vorname: </label>
+                    <input id="first-name" name="first-name" type="text" placeholder="Max">
+                </div>
+                <div class="lbl-inp-container">
+                    <label for="last-name">Nachname: </label>
+                    <input id="last-name" name="last-name" type="text" placeholder="Mustermann">
+                </div>
+                <div class="lbl-inp-container">
+                    <label for="addr">Straße/Hausnr.: </label>
+                    <input id="addr" name="addr" type="text" placeholder="Musterstr. 2">
+                </div>
+                <div class="lbl-inp-container">
+                    <label for="postalCode">PLZ: </label>
+                    <input id="postalCode" name="postalCode" type="text" placeholder="1010">
+                </div>
+                <div class="lbl-inp-container">
+                    <label for="place">Ort: </label>
+                    <input id="place" name="place" type="text" placeholder="Wien">
+                </div>
+                <div class="lbl-inp-container">
+                    <label for="phone">Tel.Nr.: </label>
+                    <input id="phone" name="phone" type="tel" placeholder="0123/123456789">
+                </div>
+                <div class="lbl-inp-container">
+                    <label for="mail">E-Mail: </label>
+                    <input id="mail" name="mail" type="email" placeholder="max@muster.at">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset id="garlic-choice" class="fieldset-demo">
+            <legend>Knoblauch</legend>
+
+            <select id="select-garlic">
+                <option>nein, danke</option>
+                <option>ja, bitte</option>
+                <option>ja, bitte extra viel</option>
+            </select>
+        </fieldset>
+        <div class="lbl-inp-container">
+            <input class="btn-submit" type="submit" value="Bestellen">
+        </div>
+    </form>
+
+
+</body>
+
+</html>

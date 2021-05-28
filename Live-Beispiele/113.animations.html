@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        /* div[class^="demo"]{
+            
+            height: 150px;
+            width: 150px;
+            background-color: cornflowerblue;
+            margin: 50px;
+        } */
+
+        @keyframes test1{
+            from{background-color: cornflowerblue;}
+            to{background-color: lime;}
+        }
+
+        @keyframes test2{
+            0%{background-color: cornflowerblue;}
+            25%{background-color: lime;}
+            50%{background-color: firebrick;}
+            75%{background-color: gold;}
+            100%{background-color: indigo;}
+        }
+
+        @keyframes test3{
+            from{
+                left: 50px;
+            }
+            to{
+                left: 450px;
+            }
+        }
+
+        .demo1{   
+            height: 150px;
+            width: 150px;
+            background-color: cornflowerblue;
+            margin: 50px;
+            /* animation-name: test1; */
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+            animation-direction: alternate;
+            animation-iteration-count: 3;
+        }
+
+        .demo2{
+            height: 150px;
+            width: 150px;
+            background-color: cornflowerblue;
+            margin: 50px;
+            animation: test2 7s 1s 3 alternate forwards;
+        }
+        .demo3{
+            height: 150px;
+            width: 150px;
+            background-color: cornflowerblue;
+            margin: 50px;
+            animation: test3 3s 1s forwards;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="demo1"></div>
+    <div class="demo2"></div>
+    <div class="demo3"></div>
+
+</body>
+</html>

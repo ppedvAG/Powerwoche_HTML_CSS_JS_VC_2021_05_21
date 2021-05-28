@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border</title>
+    <style>
+
+        .container{
+            background-color: lightgray;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        div[class^="demo"]{
+            width: 150px;
+            height: 150px;
+            background-color: lightskyblue;
+            margin: 30px;
+        }
+
+        .demo-01{
+            border: 20px groove azure;
+        }
+
+        .demo-02{
+            /* border: 2px solid black; */
+            border-radius: 10px;
+        }
+
+        .demo-03{
+            border: 2px solid black;
+            border-radius: 5px 10px 30px 0;
+        }
+
+        .demo-04{
+            border: 2px solid black;
+            border-radius: 20px 0;
+        }
+
+        .demo-05{
+            border: 6px double black;
+            border-radius: 50%;
+        }
+
+        .demo-06{
+            border: 2px solid black;
+            border-bottom-right-radius: 100%;
+        }
+
+        .demo-07{
+            border-top: 2px solid black;
+            border-right: 2px dotted black;
+            border-bottom: 6px double green;
+            border-left: 10px groove lightslategray;
+        }
+
+        .demo-08{
+            border-top: 2px solid black;
+            border-right: 2px dotted black;
+            border-bottom: 6px double green;
+            border-left: 10px groove lightslategray;
+            border-radius: 10px 70% 0 3em;
+        }
+
+        .demo-09{
+            border-radius: 50%;
+            border-top: 2px solid black;
+            border-right: 10px dotted black;
+            border-bottom: 2px solid green;
+            border-left: 10px dotted lightslategray;
+        }
+
+
+
+        div.demo-11{
+            width: 250px;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="demo-01"></div>
+        <div class="demo-02"></div>
+        <div class="demo-03"></div>
+        <div class="demo-04"></div>
+        <div class="demo-05"></div>
+        <div class="demo-06"></div>
+        <div class="demo-07"></div>
+        <div class="demo-08"></div>
+        <div class="demo-09"></div>
+        <div class="demo-10"></div>
+        <div class="demo-11"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schleifen</title>
+    <style>
+        #demo-div {
+            min-height: 200px;
+            width: 600px;
+            border: 2px solid black;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="while-demo">While-Demo</button>
+    <button id="for-demo">For-Demo</button>
+    <div id="demo-div"></div>
+
+    <script>
+
+
+        /* ********************** WHILE-Schleife ************************* */
+
+        var demoDiv = document.getElementById('demo-div');
+        var btnFor = document.getElementById('for-demo');
+        var btnWhile = document.getElementById('while-demo');
+        var i = 0; // iterator (Zähler)
+        var text = '';
+
+        btnWhile.addEventListener('click', whileDemo);
+
+        function whileDemo() {
+            while (i < 10) {
+                text += '<p>' + 'Die Schleife wurde ' + (i + 1) + ' Mal ausgeführt.' + '</p>';
+                i++;
+            }
+            demoDiv.innerHTML = '<p>' + text + '</p>';
+        }
+
+
+        /* ******************* FOR-Schleife ****************************** */
+
+        btnFor.addEventListener('click', forDemo);
+
+        function forDemo() {
+            for (var j = 10; j > 0; j--) {
+                text += '<p>' + 'Der Zähler steht auf ' + j + '.' + '</p>';
+            }
+            demoDiv.innerHTML = '<p>' + text + '</p>';
+        }
+
+
+        /* Im Normalfall werden wir hochzählen! i++, j++ ... */
+    </script>
+</body>
+
+</html>

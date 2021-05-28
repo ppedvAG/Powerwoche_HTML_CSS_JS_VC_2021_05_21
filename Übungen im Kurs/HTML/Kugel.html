@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kugel</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .container{
+            background-color: azure;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ball{
+            margin: 25px auto;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(100px 100px at 70px 70px, white 5%, rgb(221, 252, 252) 10%, 
+                                      rgb(17, 141, 190) 50%, rgb(29, 80, 134) 90%, rgb(18, 53, 92) 130%);
+            border-radius: 50%;
+            box-shadow:30px 45px 100px #1a1a1a;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+    
+</body>
+</html>

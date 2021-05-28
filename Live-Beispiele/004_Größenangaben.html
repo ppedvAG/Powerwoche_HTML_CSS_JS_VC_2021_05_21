@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Größenangaben</title>
+    <style>
+        html{
+            font-size: 20px;
+        }
+        body{
+            margin: 0;
+        }
+        div{
+            height: 150px;
+        }
+
+        .demo-px{
+            background-color: royalblue;
+            width: 200px;
+        }
+        .demo-em{
+            font-size: 10px;
+            background-color: salmon;
+            width: 10em;
+        }
+        .demo-rem{
+            font-size: 24px;
+            background-color: skyblue;
+            width: 10rem;
+        }
+        .demo-percent{
+            background-color: springgreen;
+            width: 100%;
+            /* height: 100%; */ /* funktioniert hier nicht! */
+        }
+        .demo-vw{
+            background-color: orange;
+            /* width: 100vw; */
+            font-size: 8vw;
+            height: unset;
+        }
+        .demo-vh{
+            background-color: lightslategray;
+            width: 30vh;
+        }
+
+
+        .container{
+            border-width: 2px;
+            border-style: solid;
+            border-color: yellowgreen;
+            width: 300px;
+            height: 250px;
+        }
+
+        .inner-div{
+            background-color: seagreen;
+            width: 30%;
+            height: 50%;
+        }
+
+        .demo{
+            height: 100vh;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="demo-px">Das ist eine px-Demo.</div>
+    <div class="demo-em">Das ist eine em-Demo.</div>
+    <div class="demo-rem">Das ist eine rem-Demo.</div>
+    <div class="demo-percent">Das ist eine percent-Demo.</div>
+    <div class="demo-vw">Das ist eine vw-Demo.</div>
+    <div class="demo-vh">Das ist eine vh-Demo.</div>
+
+    <div class="container">
+        <div class="inner-div"></div>
+    </div>
+
+    <div class="demo"></div>
+</body>
+</html>

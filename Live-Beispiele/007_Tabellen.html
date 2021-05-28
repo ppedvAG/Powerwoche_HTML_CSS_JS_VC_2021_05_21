@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabellen</title>
+    <!-- <link rel="stylesheet" href="Dateipfad_zu_CSS_File.css"> -->
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <caption>Obstlager</caption>
+        <!-- Tabelle -->
+        <thead>
+            <tr>
+                <th>Obst</th><!-- th = table header = Spaltenüberschrift -->
+                <th>Anzahl</th>
+                <th>Preis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- Zeile 1 -->
+                <td>Äpfel</td><!-- table data = Inhalt = so viele Spalten gibt es -->
+                <td>250</td>
+                <td>0.30</td>
+            </tr><!-- table row = Zeile -->
+            <tr>
+                <!-- Zeile 2 -->
+                <td>Bananen</td>
+                <td>100</td>
+                <td>0.25</td>
+            </tr>
+            <tr>
+                <!-- Zeile 3 -->
+                <td>Kiwis</td>
+                <td>150</td>
+                <td>1.30</td>
+            </tr>
+            <tr>
+                <!-- Zeile 4 -->
+                <td>Mangos</td>
+                <td>20</td>
+                <td>2.50</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">&copy; Leos Tabelle</td>
+                <!-- colspan = dieses td-Element erstreckt sich über 3 Spalten -->
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selektoren, Kombinatoren</title>
+    <style>
+        /* Universalselektor */
+        *{
+            /* besser eher nicht verwenden - gilt für ALLE */
+        }
+
+
+        /* Typselektor */
+        p{
+            font-family: Verdana, sans-serif;
+        }
+
+        /* Klassenselektor */
+
+        .demo-class-1{
+            color: aqua;
+            font-family: 'Courier New', monospace;
+        }
+
+
+        /* ID-Selektor */
+
+        #demo-id-1{
+            font-style: italic;
+        }
+
+        #demo-id-2{
+            font-family: Impact, sans-serif;
+        }
+
+        /* ************************************************************ */
+
+        /* Nachfahrenselektor (descendant) */
+        div span{
+            font-weight: bold;
+        }
+
+        /* Kindselektor (child) */
+
+        div>span{
+            color: red;
+        }
+
+
+        table>tbody>tr>td{
+            color: chartreuse;
+        }
+
+
+        .main-nav>li>a{
+
+        }
+
+
+
+        /* Geschwister-Kombinatoren (sibling selectors) */
+
+        h2+p{
+            font-family: Haettenschweiler, sans-serif;
+        }
+
+        h2~p{
+            background-color: lightgoldenrodyellow;
+        }
+
+
+
+        /* Pseudoklassen und -elemente */
+
+        /* Pseudoklassen */
+
+        #demo-id-1:hover{
+            color: blueviolet;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        /* LoVe/HAte - Eselsbrücke für richtige Reihenfolge */
+        a:link{
+            color: darkorange;
+        }
+        a:visited{
+            color: chartreuse;
+        }
+        a:hover{
+            color: gold;
+        }
+        a:active{
+            color: mediumblue;
+        }
+
+        /* Pseudoelemente */
+
+        #demo-id-2::first-letter{
+            font-family: Parchment;
+            font-size: 44px;
+        }
+
+        
+
+        /* Attributselektoren */
+
+        /* ist dieses Attribut gesetzt? */
+        a[target]{
+            /* mein Styling */
+        }
+
+        /* Attribut, das diesen Wert hat */
+        a[target="_blank"]{
+            /* mein Styling */
+        }
+
+        /* Wert muss mit dieser Zeichenfolge beginnen: */
+        a[class^="demo"]{
+            /* mein Styling */
+        }
+
+        
+        /* Wert muss mit dieser Zeichenfolge enden: */
+        a[class$="demo"]{
+            /* mein Styling */
+        }
+
+        
+        /* Wert muss Zeichenfolge enthalten: */
+        a[class*="demo"]{
+            /* mein Styling */
+        }
+
+
+        /* ********************************************************** */
+
+        .container{
+            background-color: aqua;
+            border-bottom: 5px solid blue;
+        }
+
+        /* Pseudoelement ::after */
+        .container::after{
+            display: block;
+            content: '';
+            clear: both;
+            border-top: 5px solid yellow;
+            border-bottom: 5px solid red;
+        }
+
+        .float-item{
+            background-color: rgb(181, 250, 250);
+            border: 2px solid rgb(0, 119, 119);
+            width: 150px;
+            height: 150px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="demo-class-2">
+        <h2>Das ist meine tolle Überschrift</h2>
+        <p>Das ist eine Unterüberschrift in einem p-Tag</p>
+        <span>Das ist eine Span.</span>
+        <p>Das ist Paragraph Nr. 01.</p>
+        <p>Das ist Paragraph Nr. 02.</p>
+        <p class="demo-class-1" id="demo-id-2">Das ist Paragraph Nr. 03.</p>
+        <div>
+            <p>Das ist ein p in einem div (verschachtelt).</p>
+        </div>
+        <p id="demo-id-1">Das ist Paragraph Nr. 04.</p>
+        <p>Das ist Paragraph Nr. 05. <span>Das ist eine Span in einem Paragraphen.</span></p>
+        <p>Das ist Paragraph Nr. 06.</p>
+        <p class="demo-class-1">Das ist Paragraph Nr. 07.</p>
+        <p>Das ist Paragraph Nr. 08.</p>
+        <p>Das ist <a href="#" target="_blank">Paragraph</a>  Nr. 09.</p>
+    </div>
+
+    <p>Das ist ein p außerhalb vom div</p>
+    <p>Das ist ein p außerhalb vom div</p>
+    <p>Das ist ein p außerhalb vom div</p>
+    <h2>h2 Überschrift</h2>
+    <p>Das ist ein p außerhalb vom div</p>
+    <p>Das ist ein p außerhalb vom div</p>
+
+    <div>Das ist ein div</div>
+    <p>p nach div</p>
+
+
+    <table>
+        <caption>Überschrift</caption>
+        <tr>
+            <td>Testtext</td>
+            <td>Testtext</td>
+            <td>Testtext</td>
+        </tr>
+        <tr>
+            <td>Testtext</td>
+            <td>Testtext</td>
+            <td>Testtext</td>
+        </tr>
+        <tr>
+            <td>Testtext</td>
+            <td>Testtext</td>
+            <td>Testtext</td>
+        </tr>
+    </table>
+
+    <div class="container">
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+    </div>
+    
+</body>
+</html>

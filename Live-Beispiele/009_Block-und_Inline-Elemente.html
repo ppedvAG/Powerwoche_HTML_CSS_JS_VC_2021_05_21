@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block- und Inline-Elemente</title>
+    <style>
+        .demo-div {
+            border: 2px solid green;
+            height: 100px;
+            width: 200px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        .span-demo {
+            color: chartreuse;
+        }
+
+        .lbl-inp-container {
+            padding: 10px 0;
+            text-align: right;
+            width: 300px;
+            /* border: 2px solid blue; */
+        }
+
+        .inp-lbl-container {
+            padding: 10px 0;
+        }
+
+        .lbl-inline-demo {
+            display: inline;
+            width: 100px; /* funktioniert NICHT! wegen display: inline!!! */
+            background-color: cyan;
+        }
+
+        .lbl-block-demo {
+            display: block;
+            width: 100px;
+            background-color: cyan;
+        }
+
+        .lbl-inline-block-demo {
+            display: inline-block;
+            width: 100px;
+            /* background-color: cyan; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="demo-div"></div>
+    <div class="demo-div"></div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda ex fugit deleniti officia ipsum excepturi
+        repellat provident quidem optio doloribus!
+    </p>
+    <p>Das ist ein Paragraph.</p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sequi temporibus officia unde aperiam corrupti
+        perspiciatis pariatur doloremque molestiae voluptatibus. Soluta, fugiat? Saepe in laboriosam ut molestiae
+        eligendi delectus sed libero, distinctio error officiis repellendus quasi minus sapiente provident dolorum
+        placeat non velit adipisci sint quaerat veniam ducimus voluptatem quibusdam. Ipsa eveniet ex vero velit totam
+        necessitatibus doloremque animi fugit temporibus similique inventore quibusdam quam a officiis quod deleniti
+        quae dolores odio consequuntur eius, quas dolorum! Voluptate, cupiditate consectetur. Maxime, voluptas
+        temporibus ab ducimus consequatur quisquam tempora blanditiis modi quasi a quae porro perspiciatis, soluta earum
+        qui! Cupiditate, doloremque totam?
+    </p>
+
+    <ul>
+        <li>Apfel</li> <!-- list item (Listeneintrag) -->
+        <li>Banane</li>
+        <li>Birne</li>
+        <li>Kiwi</li>
+    </ul>
+    <table>
+        <caption>Obstlager</caption>
+        <!-- Tabelle -->
+        <thead>
+            <tr>
+                <th>Obst</th><!-- th = table header = Spaltenüberschrift -->
+                <th>Anzahl</th>
+                <th>Preis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- Zeile 1 -->
+                <td>Äpfel</td><!-- table data = Inhalt = so viele Spalten gibt es -->
+                <td>250</td>
+                <td>0.30</td>
+            </tr><!-- table row = Zeile -->
+            <tr>
+                <!-- Zeile 2 -->
+                <td>Bananen</td>
+                <td>100</td>
+                <td>0.25</td>
+            </tr>
+            <tr>
+                <!-- Zeile 3 -->
+                <td>Kiwis</td>
+                <td>150</td>
+                <td>1.30</td>
+            </tr>
+            <tr>
+                <!-- Zeile 4 -->
+                <td>Mangos</td>
+                <td>20</td>
+                <td>2.50</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">&copy; Leos Tabelle</td>
+                <!-- colspan = dieses td-Element erstreckt sich über 3 Spalten -->
+            </tr>
+        </tfoot>
+    </table>
+
+    <p>
+        Das ist ein <a href="#">Paragraph</a>.
+        Lorem ipsum dolor sit amet <span class="span-demo">consectetur
+            adipisicing elit.</span> Minima natus nisi molestias aperiam
+        necessitatibus eum
+        consequuntur laborum enim sit nihil?
+    </p>
+
+    <img src="../images/mountains.jpg" alt="mountains">
+    <img src="../images/mountains.jpg" alt="mountains">
+    <img src="../images/mountains.jpg" alt="mountains">
+
+    <div class="lbl-inp-container">
+        <label for="">Vorname: </label>
+        <input type="text">
+    </div>
+    <div class="lbl-inp-container">
+        <label for="">Nachname: </label>
+        <input type="text">
+    </div>
+
+
+    <div class="inp-lbl-container">
+        <label class="lbl-inline-demo" for="">Vorname: </label>
+        <input type="text">
+    </div>
+    <div class="inp-lbl-container">
+        <label class="lbl-inline-demo" for="">Nachname: </label>
+        <input type="text">
+    </div>
+
+
+    <div class="inp-lbl-container">
+        <label class="lbl-block-demo" for="">Vorname: </label>
+        <input type="text">
+    </div>
+    <div class="inp-lbl-container">
+        <label class="lbl-block-demo" for="">Nachname: </label>
+        <input type="text">
+    </div>
+
+
+    <div class="inp-lbl-container">
+        <label class="lbl-inline-block-demo" for="">Vorname: </label>
+        <input type="text">
+    </div>
+    <div class="inp-lbl-container">
+        <label class="lbl-inline-block-demo" for="">Nachname: </label>
+        <input type="text">
+    </div>
+</body>
+
+</html>

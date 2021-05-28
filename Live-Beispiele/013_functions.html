@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+    <!-- normalerweise externe Stylesheets und JS-Files einbinden! -->
+    <!--  <link rel="stylesheet" href="myCss.css">
+    <script src="myJS.js" defer></script> -->
+    <style>
+
+        body{
+            background-color: aqua;
+        }
+
+        div{
+            min-height: 50px;
+            font-size: 24px;
+            border: 2px solid black;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        /* 
+        #demo03{
+            background-color: chocolate;
+        }
+        */
+        /* 
+        #demo03:hover{
+            background-color: aqua;
+            cursor: pointer;
+        }
+        */
+
+    </style>
+</head>
+<body>
+    <div id="demo01" onclick="setBgGreen()"></div>
+    <div id="demo02"></div>
+    <div id="demo03"></div>
+    <div id="demo04"></div>
+    <div id="demo05"></div>
+    <button id="btn-ok">OK</button>
+
+
+
+    <script>
+
+        /* häufige Events */
+        /* 
+            (HTML)JS
+            (on)click
+            (on)mouseover
+            (on)mouseout
+            (on)change
+            (on)input
+            (on)keydown (irgendeine Taste)
+            (on)keypress (Taste, die eine Eingabe verursacht)
+            (on)keyup
+            (on)focus
+            (on)blur
+            (on)scroll
+        
+        */
+
+
+
+
+        var demoDiv01 = document.getElementById('demo01');
+        var demoDiv02 = document.getElementById('demo02');
+        var demoDiv03 = document.getElementById('demo03');
+        var demoDiv04 = document.getElementById('demo04');
+        var demoDiv05 = document.getElementById('demo05');
+        var btnOk = document.getElementById('btn-ok');
+        
+
+
+
+        // Diese Funktion verändert die Hintergrundfarbe von DemoDiv01.
+
+        function setBgGreen(){
+            // toller Code
+            demoDiv01.style.backgroundColor = 'green';
+
+        }
+
+
+        // function call (Funktionsaufruf)
+        // setBgGreen();
+        // Funktion wird erst ausgeführt, wenn wir einen function-call machen
+
+
+        /* EventListener */
+        // wir warten darauf, dass ein bestimmtes Event eintritt, damit eine bestimmte Funktion ausgeführt wird
+        btnOk.addEventListener('click', setBgGreen);
+
+
+        // EventListener mit anonymer Funktion:
+
+        demoDiv05.addEventListener('click', function(){
+            // toller Code
+            this.style.backgroundColor = 'red';
+        });
+
+
+        // Übung:
+        // Hover-Effekt erstellen
+        // DemoDiv03
+        
+
+        demoDiv03.addEventListener('mouseover', function(){
+            this.style.backgroundColor = 'yellow';
+        });
+
+
+        demoDiv03.addEventListener('mouseout', function(){
+            this.style.backgroundColor = 'initial';
+        });
+
+
+        // Parameter übergeben
+/* 
+        function demoCalculation(x, y){
+            var ergebnis;
+            ergebnis = x*y;
+            return ergebnis;
+        }
+ */
+        // kürzer schreiben:
+
+        function demoCalculation(x, y){
+            return x * y;
+        }
+
+        console.log(demoCalculation(5, 3));
+
+
+
+        function setBgRed(obj){
+            obj.style.backgroundColor = 'red';
+        }
+
+
+        demoDiv04.addEventListener('click', function(){
+            setBgRed(demoDiv05);
+        });
+
+
+    </script>
+</body>
+</html>

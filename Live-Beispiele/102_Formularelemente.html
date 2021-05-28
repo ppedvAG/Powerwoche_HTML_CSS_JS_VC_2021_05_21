@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularelemente</title>
+    <style>
+        .lbl-inp-container {
+            margin-bottom: 10px;
+        }
+
+        .lbl-demo {
+            display: inline-block;
+            width: 100px;
+        }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="#" method="POST">
+        <div class="lbl-inp-container">
+            <label class="lbl-demo" for="">Vorname: </label>
+            <input type="text" id="first-name" class="inp-demo" name="first-name" placeholder="Max">
+        </div>
+        <div class="lbl-inp-container">
+            <label class="lbl-demo" for="">Nachname: </label>
+            <input type="text" id="last-name" class="inp-demo" name="last-name" placeholder="Mustermann">
+        </div>
+        <div class="lbl-inp-container">
+            <label class="lbl-demo" for="">Passwort: </label>
+            <input type="password" id="pw" class="inp-demo" name="pw">
+        </div>
+        <div class="lbl-inp-container">
+            <label class="lbl-demo" for="">Zahl: </label>
+            <input type="number" id="num" class="inp-demo" name="num" min="100" max="300">
+        </div>
+        <div class="lbl-inp-container">
+            <label class="lbl-demo" for="">Email: </label>
+            <input type="email" id="email" class="inp-demo" name="email">
+        </div><!-- 
+        <div class="lbl-inp-container">
+            <label class="lbl-demo" for="">Homepage: </label>
+            <input type="url" id="homepage" class="inp-demo" name="homepage" placeholder="https://muster.de"
+                value="https://" title="Bitte verwenden Sie https:// ...">
+        </div> -->
+
+        <div class="lbl-inp-container">
+            <label class="lbl-demo" for="">Telefonr.: </label>
+            <input type="tel" id="tel" class="inp-demo" name="tel">
+        </div>
+        <div class="lbl-inp-container">
+            <label class="lbl-demo" for="">Farbe: </label>
+            <input type="color" id="color" class="inp-demo" name="color">
+        </div>
+        <div class="lbl-inp-container">
+            <label class="lbl-demo" for="">Range: </label>
+            <input type="range" id="range" class="inp-demo" name="range" min="0" max="100" value="50" step="1">
+        </div>
+
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        <fieldset>
+            <legend>Pizzas</legend>
+            <div class="lbl-inp-container">
+                <input type="radio" name="pizzas" checked>
+                <label for="">Margherita</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="radio" name="pizzas">
+                <label for="">Della Casa</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="radio" name="pizzas">
+                <label for="">Tonno</label>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Extras</legend>
+            <div class="lbl-inp-container">
+                <input type="checkbox" name="extras">
+                <label for="">Käse</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="checkbox" name="extras">
+                <label for="">Salami</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="checkbox" name="extras">
+                <label for="">Mais</label>
+            </div>
+        </fieldset>
+
+        <select name="" id="">
+            <option value="margherita">Margherita</option>
+            <option value="tonno">Tonno</option>
+            <option value="dellacasa">Della Casa</option>
+        </select>
+
+        <div class="lbl-inp-container">
+            <input type="submit" value="Abschicken">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+
+    <!-- <button>OK</button> -->
+    <p>
+        Das ist ein Paragraph.
+        Die <abbr title="World Health Organisation">WHO</abbr> hat ....
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-else</title>
+    <style>
+        #demo-div {
+            height: 200px;
+            width: 600px;
+            border: 2px solid black;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="demo-div"></div>
+
+    <div><input id="demo-inp" type="text"></div>
+
+    <select name="pizzas" id="pizzas">
+        <option value="Margherita">Margherita</option>
+        <option value="Tonno">Tonno</option>
+        <option value="Della Casa">Della Casa</option>
+    </select>
+
+    <div>
+        <input type="text" name="dow" id="dow"> <!-- dow = day of week -->
+    </div>
+
+
+
+    <script>
+
+
+
+        /* ********************** IF - ELSE ************************************ */
+        var demoInp = document.getElementById('demo-inp');
+
+        /*   var x = '$'; */
+
+
+
+        function checkVal1() {
+            var x = demoInp.value;
+
+            if (x == 5) {
+                alert('Der Wert von x ist wirklich 5!');
+            }
+            else if (x == 7) {
+                alert('Der Wert von x ist 7!');
+            }
+            else if (x == 10) {
+                alert('Der Wert von x ist 10!');
+            }
+            else {
+                alert('Ungültiger Wert!');
+            }
+        }
+
+
+        function checkVal() {
+            var x = parseInt(demoInp.value);
+
+            if (x === 5) {
+                alert('Der Wert von x ist genau 5!');
+                console.log(typeof x);
+            }
+            else if (x < 5) {
+                alert('Der Wert von x ist kleiner als 5!');
+            }
+            else if (x > 5) {
+                alert('Der Wert von x ist größer als 5!');
+            }
+            else {
+                alert('Ungültiger Wert!');
+            }
+        }
+
+
+        demoInp.addEventListener('change', checkVal);
+
+
+
+        // Kurzschreibweise für if-else, wenn es nur zwei Möglichkeiten gibt:
+
+        // (x === 5) ? alert(true) : alert(false);
+
+
+
+
+        /*  ******************* SWITCH - CASE **************************** */
+
+        var inp = document.getElementById('pizzas');
+        var demoDiv = document.getElementById('demo-div');
+
+        inp.addEventListener('change', checkInp);
+
+        function checkInp() {
+            switch (inp.value) {
+
+                case 'Margherita':
+                    demoDiv.style.backgroundColor = 'red';
+                    break;
+                case 'Tonno':
+                    demoDiv.style.backgroundColor = 'green';
+                    break;
+                case 'Della Casa':
+                    demoDiv.style.backgroundColor = 'blue';
+                    break;
+                default:
+                    alert('Bitte wählen Sie eine Pizza aus!');
+            }
+        }
+
+
+        // Übung: Switch-Case - Input Feld, in das die Wochentage eingetragen werden sollen
+
+
+        var weekInp = document.getElementById('dow');
+        var text = '';
+
+        weekInp.addEventListener('change', checkWeekday);
+
+
+        function checkWeekday() {
+            var valLowerCase = weekInp.value.toLowerCase();
+
+            switch (valLowerCase) {
+
+                case 'montag':
+                    demoDiv.style.backgroundColor = 'red';
+                    text = 'Oje, lange Woche...';
+                    break;
+                case 'dienstag':
+                    demoDiv.style.backgroundColor = 'orangered';
+                    text = 'Dienstag...';
+                    break;
+                case 'mittwoch':
+                    demoDiv.style.backgroundColor = 'orange';
+                    text = 'Mittwoch';
+                    break;
+                case 'donnerstag':
+                    demoDiv.style.backgroundColor = 'yellow';
+                    text = 'Donnerstag';
+                    break;
+                case 'freitag':
+                    demoDiv.style.backgroundColor = 'purple';
+                    text = 'Juhuuu';
+                    break;
+                case 'samstag':
+                    demoDiv.style.backgroundColor = 'blue';
+                    text = 'Endlich Wochenende!';
+                    break;
+                case 'sonntag':
+                    demoDiv.style.backgroundColor = 'green';
+                    text = 'Sonntag';
+                    break;
+                default:
+                    alert('Bitte geben Sie einen Wochentag ein!');
+            }
+
+            demoDiv.innerHTML = '<p>' + text + '</p>';
+
+        }
+
+
+    </script>
+</body>
+
+</html>

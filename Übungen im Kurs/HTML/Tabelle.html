@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grundstruktur</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="cname-container">CompanyName + Logo</div>
+        <nav class="main-nav-container">Navigationsleiste</nav>
+        <main class="main-content-container">
+            <table>
+                <caption>Obstlager</caption>
+                <!-- Tabelle -->
+                <thead>
+                    <tr>
+                        <th>Obst</th><!-- th = table header = Spaltenüberschrift -->
+                        <th>Anzahl</th>
+                        <th>Preis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- Zeile 1 -->
+                        <td>Äpfel</td><!-- table data = Inhalt = so viele Spalten gibt es -->
+                        <td>250</td>
+                        <td>0.30</td>
+                    </tr><!-- table row = Zeile -->
+                    <tr>
+                        <!-- Zeile 2 -->
+                        <td>Bananen</td>
+                        <td>100</td>
+                        <td>0.25</td>
+                    </tr>
+                    <tr>
+                        <!-- Zeile 3 -->
+                        <td>Kiwis</td>
+                        <td>150</td>
+                        <td>1.30</td>
+                    </tr>
+                    <tr>
+                        <!-- Zeile 4 -->
+                        <td>Mangos</td>
+                        <td>20</td>
+                        <td>2.50</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">&copy; Leos Tabelle</td>
+                        <!-- colspan = dieses td-Element erstreckt sich über 3 Spalten -->
+                    </tr>
+                </tfoot>
+            </table>
+        </main>
+        <footer class="main-footer-container">Footer</footer>
+    </div>
+</body>
+
+</html>

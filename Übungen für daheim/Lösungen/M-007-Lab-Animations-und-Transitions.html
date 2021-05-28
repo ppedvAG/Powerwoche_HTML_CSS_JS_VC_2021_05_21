@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations und Transitions</title>
+    <style>
+        body {
+            background-color: midnightblue;
+            padding: 100px;
+        }
+
+
+        .flip-container {
+            height: 353px;
+            width: 530px;
+            perspective: 300px;
+            margin-bottom: 50px;
+        }
+
+        .flipcard,
+        .flipcard-front,
+        .flipcard-back {
+            height: 100%;
+            width: 100%;
+        }
+
+        .flipcard {
+            transform-style: preserve-3d;
+            position: relative;
+            transition: 800ms;
+        }
+
+        .flipcard-front,
+        .flipcard-back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .flipcard-front {
+            background-color: orangered;
+            /* transform: rotateX(0); */
+        }
+
+        .flipcard-back {
+            background-color: rgb(183, 209, 236);
+            /* background: url(Dateipfad_zu_Bild.jpg) no-repeat center; */
+            transform: rotateX(180deg);
+        }
+
+
+        .button-demo {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            color: white;
+            padding: 0.5em 1.5em;
+            border: 2px ridge rgb(183, 209, 236);
+            border-radius: 0.2em;
+            background-color: rgb(107, 113, 195);
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .button-demo::before {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            right: 100%;
+            bottom: 0;
+            background: linear-gradient(-45deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        }
+
+        .button-demo:hover {
+            cursor: pointer;
+        }
+
+        .button-demo:hover::before {
+            animation: shimmer 300ms linear forwards;
+        }
+
+        @keyframes shimmer {
+            from {
+                left: -100%;
+                right: 100%;
+            }
+
+            to {
+                left: 100%;
+                right: -100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="flip-container" class="flip-container">
+        <div id="flipcard" class="flipcard">
+            <div class="flipcard-front"></div>
+            <div class="flipcard-back"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <button id="btn-flip" class="button-demo">Click me</button>
+    </div>
+
+    <script>
+
+
+        var clicked = false;
+
+        document.getElementById('btn-flip').addEventListener('click', function () {
+            if (clicked) {
+                document.getElementById('flipcard').style.transform = 'rotateX(0deg)';
+                clicked = false;
+            }
+            else {
+                document.getElementById('flipcard').style.transform = 'rotateX(180deg)';
+                clicked = true;
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        html{
+            font-size: 20px;
+        }
+        .float-container {
+            background-color: cyan;
+            /* border: 10px solid gold; */
+            padding: 50px;
+            width: 60%;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        .float-item {
+            width: 150px;
+            height: 150px;
+            background-color: rgb(174, 255, 255);
+            border: 2px solid rgb(0, 97, 97);
+            float: left;
+            margin: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /* 
+        .clearboth{
+            clear: both;
+        }
+ */
+
+        .float-container::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        .inline-container {
+            background-color: darkblue;
+        }
+
+        .inline-item {
+            width: 150px;
+            height: 150px;
+            background-color: rgb(16, 16, 224);
+            border: 2px solid rgb(184, 184, 243);
+            display: inline-block;
+        }
+
+        .img-container {
+           /*  border: 2px solid red; */
+            width: 25%;
+            float: right;
+            padding: 40px 50px;
+        }
+
+        .img-container>img {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="float-container">
+        <div class="float-item">01</div>
+        <div class="float-item">02</div>
+        <div class="float-item">03</div>
+        <div class="float-item">04</div>
+        <div class="float-item">05</div>
+        <div class="float-item">06</div>
+        <div class="float-item">07</div>
+        <div class="float-item">08</div>
+        <div class="float-item">09</div>
+        <!-- <div class="clearboth"></div> -->
+    </div>
+
+    <div class="inline-container">
+        <div class="inline-item">01</div>
+        <div class="inline-item">02</div>
+        <div class="inline-item">03</div>
+        <div class="inline-item">04</div>
+        <div class="inline-item">05</div>
+        <div class="inline-item">06</div>
+        <div class="inline-item">07</div>
+        <div class="inline-item">08</div>
+        <div class="inline-item">09</div>
+    </div>
+
+    <div class="float-container">
+        <div class="img-container">
+            <img src="../images/kingfisher.jpg" alt="kingfisher">
+        </div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda doloremque quasi. Ipsam commodi, tempora
+        saepe sunt blanditiis aut quia voluptatem mollitia qui itaque omnis inventore deserunt dolorum ad repellendus?
+        Fuga sit ipsa corporis cum accusantium, unde voluptatem? Earum commodi officia natus facere dicta recusandae
+        consequuntur cum, expedita, ducimus repudiandae suscipit sunt, sed molestiae soluta exercitationem saepe placeat
+        provident fugit corrupti eius in rem? Eveniet delectus a quas amet vel unde ducimus rem quibusdam ipsa, saepe
+        incidunt. Cum id veritatis et, molestias alias a aspernatur possimus, dolor odio impedit nobis! Ea quam dolor in
+        atque quis vitae exercitationem nesciunt ipsam a blanditiis tenetur asperiores sequi minus at, deleniti nemo
+        accusantium iusto assumenda maiores earum. Velit quo repudiandae quaerat ipsum mollitia unde tempora suscipit
+        hic, alias soluta nam quos deserunt enim totam, minima magni non quas tempore assumenda corrupti! Eaque ut
+        itaque est accusantium reprehenderit voluptatum id sint voluptates suscipit consequuntur facere aspernatur
+        voluptas ea provident ullam perferendis corrupti at amet, porro veniam vel. Omnis molestiae nemo voluptatum
+        mollitia saepe accusamus ducimus placeat eum beatae necessitatibus! Necessitatibus cupiditate esse quidem libero
+        labore sapiente temporibus molestiae nihil, facilis natus delectus eum ratione omnis, repellendus, eius eos.
+        Repellendus quae voluptate cum recusandae architecto!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati accusamus voluptatem asperiores ad quis
+        ipsa libero consectetur quod atque necessitatibus repellat eius temporibus soluta neque, distinctio itaque magni
+        aut quos rem, eum culpa dolor, eveniet architecto? Repellendus minima totam nihil eos praesentium, nisi velit,
+        eius, dolorem repellat dicta deserunt et est eaque saepe neque autem doloribus blanditiis quisquam beatae
+        dolorum in voluptatum cupiditate aut. Dolor eos, a illo praesentium vero ipsa iste facere. Non dolorem
+        repellendus dolor amet sapiente ad quo praesentium tenetur aut quaerat. Debitis doloribus molestiae
+        necessitatibus porro iste consequuntur ullam, incidunt exercitationem ratione rerum ducimus saepe!
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoelemente und -klassen</title>
+    <style>
+        .img-container {
+            border: 5px solid gold;
+            background-color: black;
+        }
+
+        .img-container::before {
+            display: block;
+            content: '';
+            border-top: 20px dotted dodgerblue;
+            border-bottom: 20px double chartreuse;
+        }
+
+        .img-container::after {
+            display: block;
+            content: '';
+            clear: both;
+            border-top: 20px double chartreuse;
+            border-bottom: 20px dotted orangered;
+        }
+
+        .img-container>img {
+            display: block;
+            width: 50%;
+            float: left;
+        }
+
+        .demo1>li::marker {
+            content: '❀ ';
+        }
+        .demo2 {
+            list-style-type: none;
+        }
+        .demo2>li::before {
+            content: '✗';
+            display: inline-block;
+        }
+        .demo3 {
+            list-style-image: url(../../../Material_images_alle_Kurse/apple.png);
+        }
+        .button-demo{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            color: white;
+            padding: 0.5em 1.5em;
+            border: 2px ridge rgb(183, 209, 236);
+            border-radius: 0.2em;
+            background-color: rgb(107, 113, 195);
+            position: relative; /*  <-- hinzufügen! */
+        }
+
+
+        .button-demo::before{
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(-45deg, transparent, white, transparent);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pseudoelemente und -klassen</h1>
+    <div class="img-container">
+        <img src="../../../Material_images_alle_Kurse/canyon.jpg" alt="canyon">
+        <img src="../../../Material_images_alle_Kurse/lake.jpg" alt="lake">
+    </div>
+
+    <h2>Liste Demo 1</h2>
+    <ul class="demo1">
+        <li>Äpfel</li>
+        <li>Bananen</li>
+        <li>Birnen</li>
+        <li>Kiwis</li>
+        <li>Weintrauben</li>
+    </ul>
+    <h2>Liste Demo 2</h2>
+    <ul class="demo2">
+        <li>Äpfel</li>
+        <li>Bananen</li>
+        <li>Birnen</li>
+        <li>Kiwis</li>
+        <li>Weintrauben</li>
+    </ul>
+    <h2>Liste Demo 3</h2>
+    <ul class="demo3">
+        <li>Äpfel</li>
+        <li>Bananen</li>
+        <li>Birnen</li>
+        <li>Kiwis</li>
+        <li>Weintrauben</li>
+    </ul>
+
+    <div class="container">
+        <button class="button-demo">Click me</button>
+    </div>
+
+
+
+</body>
+
+</html>

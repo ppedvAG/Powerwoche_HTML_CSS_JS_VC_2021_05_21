@@ -1,0 +1,49 @@
+html{
+    font-size: 20px;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Typselektoren */
+p{
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;  
+}
+
+
+/* Klassenselektor */
+.class-demo{
+    color: aqua;
+}
+
+
+/* ID-Selektor */
+#demo-id-1{
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/* ***************************************************************** */
+
+
+.demo-div-1{
+    height: 100px;
+    background-color: lightblue;
+}
+
+.container{
+    width: 500px;
+    height: 200px;
+}
+
+.inner-div{
+    height: 200px;
+    background-color: lightskyblue;
+}
+
+a{
+    text-decoration: none; /* underline = unterstrichen */
+    font-size: 24px;
+}
